@@ -1,0 +1,10 @@
+#!name=ktpWarp
+#!desc=课堂派自动签到
+#!openUrl=https://github.com/celesWuff/ktpwarp-ios-mitm
+#!author=celesWuff
+
+[URL Rewrite]
+(^https?:\/\/w.ketangpai.com\/checkIn\/checkinCodeResult)(\?.+) https://celeswuff.github.io/ktpwarp-web/$2 302
+
+[MITM]
+hostname = %APPEND% w.ketangpai.com

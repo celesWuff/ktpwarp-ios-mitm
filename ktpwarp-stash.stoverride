@@ -1,0 +1,8 @@
+name: ktpWarp
+desc: 课堂派自动签到
+
+http:
+  mitm:
+    - 'w.ketangpai.com'
+  url-rewrite:
+    - (^https?:\/\/w.ketangpai.com\/checkIn\/checkinCodeResult)(\?.+) https://celeswuff.github.io/ktpwarp-web/$2

@@ -1,0 +1,12 @@
+#!name=ktpWarp
+#!desc=课堂派自动签到
+#!openUrl=https://github.com/celesWuff/ktpwarp-ios-mitm
+#!author=celesWuff
+
+url_rewrites:
+  - match: "(^https?:\/\/w.ketangpai.com\/checkIn\/checkinCodeResult)(\?.+)"
+    location: https://celeswuff.github.io/ktpwarp-web/$2
+    status_code: 302
+mitm:
+  hostnames:
+    - w.ketangpai.com
