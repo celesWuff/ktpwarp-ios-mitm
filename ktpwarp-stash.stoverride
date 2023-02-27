@@ -5,4 +5,4 @@ http:
   mitm:
     - 'w.ketangpai.com'
   url-rewrite:
-    - (^https?:\/\/w.ketangpai.com\/checkIn\/checkinCodeResult)(\?.+) https://celeswuff.github.io/ktpwarp-web/$2
+    - (^https?:\/\/w.ketangpai.com\/checkIn\/checkinCodeResult)(\?.+) https://celeswuff.github.io/ktpwarp-web/$2 302
