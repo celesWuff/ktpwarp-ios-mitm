@@ -24,11 +24,15 @@ ktpWarp 仍处于 Beta 阶段，这代表 ktpWarp 尚未在生产环境中得到
 
 ### Shadowrocket
 
-[点击安装](shadowrocket://install?https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-surge.sgmodule)
+安装路径：配置 > 模块 > 右上角的“+”
+
+https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-surge.sgmodule
 
 ### Quantumult X
 
-[点击安装](quantumult-x:///add-resource?remote-resource=%7B%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FcelesWuff%2Fktpwarp-ios-mitm%2Fmaster%2Fktpwarp-quantumultx.conf%2Ctag%3Dktpwarp%22%5D%7D)
+安装路径：风车 > 重写 > 引用
+
+https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-quantumultx.conf
 
 ### Surge
 
@@ -38,7 +42,9 @@ https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-surg
 
 ### Loon
 
-[点击安装](loon://import?plugin=https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-loon.plugin)
+安装路径：配置 > 插件 > 插件
+
+https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-loon.plugin
 
 ### Stash
 
@@ -48,7 +54,7 @@ https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-stas
 
 ### Egern
 
-安装路径：首页 > 工具 > 模块
+安装路径：工具 > 模块
 
 https://raw.githubusercontent.com/celesWuff/ktpwarp-ios-mitm/master/ktpwarp-egern.yaml
 
