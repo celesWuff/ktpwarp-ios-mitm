@@ -18,9 +18,33 @@ ktpWarp 仍处于 Beta 阶段，这代表 ktpWarp 尚未在生产环境中得到
 
 在这些网络工具 app 的帮助下，当您在您的 iOS 设备上扫描并访问课堂派签到二维码时，我们能够通过 MITM（中间人攻击）的方式，自动地解密网络请求，获取二维码签到的参数，并将这些参数转交给 ktpWarp 的网页客户端。
 
+## 已知问题
+
+若使用 iOS 系统扫码器，打开的页面始终不能自动连接服务器。
+
+缓解措施：
+
+- 配置下方的“隐藏功能”，自动连接服务器。
+
+- 使用微信或支付宝扫码。
+
+- 扫码后，立即点击右下角的“在 Safari 中打开”。
+
+## 隐藏功能
+
+编辑模块，在 URL 重写的目标地址后添加 `server` 参数，可以自动连接到指定的 ktpwarp-server，不论使用哪种工具扫码或之前是否连接过。另见 https://github.com/celesWuff/ktpwarp-web#隐藏功能 。
+
+- 具体操作：在模块中找到 `https://celeswuff.github.io/ktpwarp-web/$2`，在 `$2` 之后添加 `&server=wss://foo.tld`，其中 `wss://foo.tld` 为 ktpwarp-server 的地址。
+
+- 例子：`(模块代码前略) https://celeswuff.github.io/ktpwarp-web/$2&server=wss://example.com/our-ktpwarp-server (后略, 如有)`
+
 ## 安装
 
-**注意：我们建议您配置完成后，立刻使用您将会使用的扫码工具，扫描一张过期或不存在的二维码，然后连接上您的服务器。这样，当您下一次扫码时，您就可以立刻看到签到结果，而不再需要反复重新输入服务器地址了。**
+**注意：我们建议您配置完成后，立刻使用您将会使用的扫码工具，扫描下面这张二维码，如果看到了 ktpWarp 的界面则代表您的模块工作正常。然后，在这个界面中连接上您的服务器，这样，当您下一次扫码时，您就可以立刻看到签到结果，而不再需要反复重新输入服务器地址了（如果您没有配置上方提到的“隐藏功能”）。**
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQAQMAAAC6caSPAAAABlBMVEX///8AAABVwtN+AAAB9ElEQVR42u3bu3HDMAyAYfpcuPQIHkWjSaNplIyQ0oXOCgEQhMK4Se4Mp/hRWOLjU4UzRJouBPHyuO49HrU5t/ullFu7/Sjy6Q0IJIUsxWJ6iL8X6zzXcbk9C5FObUAgCcRHZerkmazXrT1nNzJpekMgbyBXv8YXa6UQyFuJxjTWfQgkmYx1f7ns62n/LMWeM9R9CCSL9DiSeauZXGpDSQ8IJIE8D1/ES3pvwwAEkkA8k6W0W6zW6V+smtGe3hBIBondTemN1dJiU2O19Gh1HwL5JfEbTUvJvJqJQn3qqjMuQiwgkDwicRKis6JzEixEn7dBIElk3nU09i37qDR81kl3jSCQTOLvlL3E+77lpteo+xBIBonR9hoae+yy1PGrZzIEkkJmX3Qfe63E16nW9E4IJIn4HpCG0Ngg+lH3IZAUcm2l/e582FPy0M5a9yGQDGI3Prpc4rV0OG9pLwUQSB45ZvLefxOPd9XV6j4E8ifybaoXcRm140AWfqISAkkgx+hnej1kJR7b6hBICnl+Si2W5+OZ3joAgaSQONNrU9dYnmsGWyb7djoEkkDGP+bYSaKndV87IZB0YqPD6ij2LWsmQyDpJP4BoVjJTQf3lt4QSA4pFk5qKLF6r1d/DgSSRXoIOe5qKpGrT1gKBPJqQhD/M74AlHaNKqkg0gMAAAAASUVORK5CYII=)
+
+（这个二维码可以触发模块，但不会执行任何签到）
 
 ### Shadowrocket
 
@@ -121,12 +145,6 @@ Egern > 工具 > MITM > 证书 > 生成新证书 > 安装证书
 系统设置 > 通用 > 关于本机 > 证书信任设置 > 勾选刚刚下载的证书
 
 回到 Egern，确认刚刚安装的模块和“MITM”已经打开。
-
-## 已知问题
-
-若使用 iOS 系统扫码器，打开的页面始终不能自动连接服务器。
-
-缓解措施：使用微信或支付宝，或者在扫码后，立即点击右下角的“在 Safari 中打开”。
 
 ## 许可证
 
